@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+
 struct Node{
 	int num;
 	struct Node *prox;
-}; 
+};
+
 typedef struct Node node;
 unsigned int Head, Tail;
 float inicio, final, tmili;
@@ -22,7 +24,7 @@ void libera(node *fila);
 
 int main(void)
 {
-	//cÛdigos para medir o tempo de execuÁ„o
+	//c√≥digos para medir o tempo de execu√ß√£o
 	
     //cria lista
 	node *fila = (node *) malloc(sizeof(node));
@@ -47,14 +49,14 @@ int LL(int *ptr){
 }
 
 int SC(int *ptr, int value){
-	//caso o ponteiro ptr n„o tenha sido atualizado na operaÁ„o LL
-	//VERIFICAR SE O PROCEDIMENTO NO IF ABAIXO SEGUE A L”GICA DA IMPLEMENTA«√O
+	//caso o ponteiro ptr n√£o tenha sido atualizado na opera√ß√£o LL
+	//VERIFICAR SE O PROCEDIMENTO NO IF ABAIXO SEGUE A L√ìGICA DA IMPLEMENTA√á√ÉO
 	
 	if(*ptr != value){
 		*ptr = value;
-		return 1;//operaÁ„o realizada com sucesso
+		return 1;//opera√ß√£o realizada com sucesso
 	}else{
-		return 0;//operaÁ„o n„o realizada
+		return 0;//opera√ß√£o n√£o realizada
 	}
 }
 
@@ -105,7 +107,7 @@ void opcao(node *fila, int op)
 		case 3:
 			
 			//node *testa = (node *) malloc(sizeof(node));
-			//INSTRU«√O REFERENTE A INSER«√O DO VALOR FEITA PELO USU¡RIO
+			//INSTRU√á√ÉO REFERENTE A INSER√á√ÉO DO VALOR FEITA PELO USU√ÅRIO
 			//printf("Novo Elemento: ");
 			//scanf("%d",&fila->num);
 			inicio = GetTickCount();
@@ -119,7 +121,7 @@ void opcao(node *fila, int op)
     		tmili = ((final - inicio)/1000); 
     		printf("tempo decorrido em segundos: %.4f\n", tmili); 
 			//printf("%d\n",i);
-			//AQUI IR¡ O O O FINAL DA VAR TEMPO
+			//AQUI IR√Å O O O FINAL DA VAR TEMPO
 			//printf("acabou");
 			//enqueue(fila);
 			break;		
@@ -141,7 +143,6 @@ int vazia(node *fila)
 		return 0;
 }
 
-//no artigo o cara cria uma array de um nÛ igual a linha de baixo
 node *array[100000];
 
 void exibe(node *fila)
@@ -149,8 +150,8 @@ void exibe(node *fila)
 	printf("\n\nItens Gravados:\n");
 	int i = 0;
 	//printf("\nValor do I: %d\n",i);
-	//n„o aparece os valores da remoÁ„o pq o primeiro esta nulo
-	//reformular a lÛgica
+	//n√£o aparece os valores da remo√ß√£o pq o primeiro esta nulo
+	//reformular a l√≥gica
     while(array[i] != NULL){
         
         printf("%d ",array[i]); 
@@ -162,7 +163,7 @@ void exibe(node *fila)
 	printf("\n\n");
 }
 	
-//mÈtodo para inserÁ„o
+//m√©todo para inser√ß√£o
 //trocar o tipo de parametro recebido
 //int enqueue(node *fila){
 
